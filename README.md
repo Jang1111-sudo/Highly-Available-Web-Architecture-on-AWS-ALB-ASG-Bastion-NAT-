@@ -28,7 +28,6 @@ The architecture was built from scratch and includes real-world troubleshooting 
 🏗 Architecture
 
 Internet
-
     ↓
 
 Application Load Balancer (Public Subnets)
