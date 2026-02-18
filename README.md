@@ -27,30 +27,23 @@ The architecture was built from scratch and includes real-world troubleshooting 
 
 🏗 Architecture
 
+```bash
 Internet
     ↓
-
 Application Load Balancer (Public Subnets)
-
     ↓
-
 Target Group(Logical Resource)
-
     ↓
-
 Auto Scaling Group
-
     ↓
-
 EC2 Web Servers (Private Subnets, Amazon Linux 2023)
 
 Management Access:
-
 Local PC → Bastion Host → ASG Instances
 
 Outbound Access:
-
 Private Subnet → NAT Gateway → Internet Gateway
+```
 
 🧱 VPC Design
 
