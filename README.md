@@ -1,6 +1,8 @@
 # Highly-Available-Web-Architecture-on-AWS-ALB-ASG-Bastion-NAT-
 Project2
 
+-----------------------
+
 📌 Overview
 
 This project demonstrates how to build a highly available, auto-scaled web application architecture on AWS using:
@@ -21,6 +23,8 @@ Security Groups and NACL configuration
 
 The architecture was built from scratch and includes real-world troubleshooting scenarios encountered during implementation.
 
+-----------------------
+
 🏗 Architecture
 Internet
     ↓
@@ -37,6 +41,7 @@ Local PC → Bastion Host → ASG Instances
 
 Outbound Access:
 Private Subnet → NAT Gateway → Internet Gateway
+
 🧱 VPC Design
 
 2 Public Subnets (Multi-AZ)
@@ -82,6 +87,8 @@ echo "Web Server from $(hostname)" > /var/www/html/index.html
 
 This script installs Apache automatically and starts the service during instance launch.
 
+-----------------------
+
 🧠 Major Troubleshooting & Lessons Learned
 
 This project involved multiple real-world infrastructure issues. Below are the key challenges and how they were resolved.
@@ -117,11 +124,15 @@ Host asg1
   IdentityFile C:\path\Project2-LT.pem
   ProxyJump bastion
 
+-----------------------
+
 ❌ 2. "Permission denied (publickey)"
 
 Cause: Wrong key file used when connecting.
 
 Fix: Ensure correct key pair matches the instance.
+
+-----------------------
 
 ❌ 3. ALB 503 Error
 
@@ -130,6 +141,8 @@ No healthy targets in Target Group.
 
 Cause:
 ASG instances were not properly registered or unhealthy.
+
+-----------------------
 
 ❌ 4. Target Group Unhealthy – Web Server Not Running
 
@@ -143,6 +156,8 @@ User Data failed during yum install httpd.
 
 Why?
 ASG instances were in private subnet without internet access.
+
+-----------------------
 
 ❌ 5. NAT Gateway Timeout (Critical Issue)
 
@@ -172,6 +187,8 @@ Terminated existing instances to force recreation
 
 Confirmed instances launched in Private Subnet
 
+-----------------------
+
 ✅ Final Result
 
 ALB successfully routes traffic to ASG instances
@@ -185,6 +202,8 @@ Bastion-based SSH access working
 Private instances access internet via NAT
 
 Infrastructure fully operational
+
+-----------------------
 
 📈 What This Project Demonstrates
 
@@ -204,6 +223,8 @@ Advanced debugging of AWS networking
 
 Real-world infrastructure problem solving
 
+-----------------------
+
 🧠 Key Takeaways
 
 Route Tables must point to the correct NAT (Deleted NAT causes silent failures)
@@ -215,6 +236,8 @@ Instance Refresh does not move existing instances automatically
 Always verify actual subnet association
 
 Debugging AWS networking requires step-by-step traffic flow analysis
+
+-----------------------
 
 🚀 Future Improvements
 
