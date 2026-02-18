@@ -81,13 +81,14 @@ Inbound: SSH (22) from my public IP
 Outbound: All traffic
 
 ⚙️ Launch Template User Data
+```bash
 #!/bin/bash
 
 yum install -y httpd
 systemctl start httpd
 systemctl enable httpd
 echo "Web Server from $(hostname)" > /var/www/html/index.html
-
+```
 This script installs Apache automatically and starts the service during instance launch.
 
 -----------------------
