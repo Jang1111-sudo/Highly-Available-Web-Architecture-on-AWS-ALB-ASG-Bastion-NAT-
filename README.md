@@ -201,11 +201,9 @@ Health checks pass
 
 Page refresh shows different hostnames (Load balancing confirmed)
 
+<img width="1160" height="243" alt="image" src="https://github.com/user-attachments/assets/7536a57c-eed1-4cda-8d0c-ec4cecb579cc" />
 
-<img width="1049" height="243" alt="image" src="https://github.com/user-attachments/assets/e60d8d5d-8ec8-46d5-8d8b-f18f9481c264" />
-
-<img width="1160" height="243" alt="image" src="https://github.com/user-attachments/assets/7567ba8f-1247-4fc8-ab53-466fef75dd65" />
-
+<img width="1160" height="243" alt="image" src="https://github.com/user-attachments/assets/2860630d-a19f-4a85-96cf-2cb4de5d7be4" />
 
 Bastion-based SSH access working
 
