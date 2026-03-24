@@ -258,3 +258,6 @@ Sticky sessions configuration
 CloudWatch monitoring and alarms
 
 CI/CD integration
+
+👨‍💻 Author
+Tae Young Jang
