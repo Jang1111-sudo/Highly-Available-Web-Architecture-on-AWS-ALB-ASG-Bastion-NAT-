@@ -1,5 +1,4 @@
-# Highly-Available-Web-Architecture-on-AWS-ALB-ASG-Bastion-NAT-
-Project2
+# Project2 : Highly-Available-Web-Architecture-on-AWS-ALB-ASG-Bastion-NAT-
 
 -----------------------
 
